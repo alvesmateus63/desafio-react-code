@@ -1,0 +1,121 @@
+@import "../../sass/variables";
+@import "../../sass/mixins";
+
+/*
+  Welcome
+*/
+
+.welcome {
+  margin: 1rem 0;
+  color: $blue;
+  text-align: center;
+}
+
+/*
+  Info section
+*/
+.infoSection {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem 2rem;
+  gap: 2rem;
+  text-align: justify;
+
+  div {
+    flex: 1;
+  }
+
+  .about {
+    h2 {
+      padding: 10px;
+      border-radius: 5px 5px 0 0;
+      color: $green;
+      background-color: $blue;
+    }
+    p {
+      padding: 10px;
+      border-radius: 0 0 10px 10px;
+      background-color: $light-gray;
+      box-shadow: 1px 1px 5px $light-gray;
+
+      span {
+        font-weight: bold;
+      }
+    }
+  }
+
+  .value {
+    display: flex;
+    flex-direction: column;
+
+    h3 {
+      margin-bottom: 5px;
+      color: $blue;
+    }
+
+    p {
+      margin-bottom: 5px;
+    }
+
+    ul {
+      padding: 0 2rem;
+    }
+  }
+}
+
+/*
+  Contact section
+*/
+
+.contactSection {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)),
+    url("../../images/medic1.jpg");
+
+  form {
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2rem 2rem 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 3px $black;
+    color: $white;
+    background-color: $blue;
+
+    h2 {
+      margin-top: 0;
+      margin-bottom: 5px;
+      text-align: center;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 0.5rem 5px;
+    }
+
+    label {
+      margin-bottom: 5px;
+    }
+
+    input {
+      margin-bottom: 5px;
+    }
+
+    textarea {
+      resize: none;
+    }
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .infoSection {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

@@ -7,8 +7,18 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  @include padding-container;
-  background-color: red;
+  @include padding-container(0, 2rem);
+  color: $white;
+  background-color: $blue;
+}
+
+.navbarContainer img {
+  width: 85px;
+}
+
+.navbarContainer .link {
+  color: $white;
+  text-decoration: none;
 }
 
 .navbarMenu {
@@ -23,12 +33,14 @@
 
 .navbarMenu > div:hover {
   border-radius: 1rem;
-  background-color: blue;
+  background-color: $green;
   cursor: pointer;
 }
 
 @media only screen and (max-width: 600px) {
-  .navbarMenu {
-    display: none;
+  .navbarContainer {
+    flex-direction: column;
+    height: fit-content;
+    padding-bottom: 1rem;
   }
 }

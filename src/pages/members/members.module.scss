@@ -1,0 +1,17 @@
+@import "../../sass/variables";
+@import "../../sass/mixins";
+
+.cardContainer {
+  max-width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem 0;
+  @include padding-container(1rem, 2rem);
+}
+
+@media only screen and (max-width: 850px) {
+  .cardContainer {
+    justify-content: center;
+  }
+}

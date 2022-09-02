@@ -1,0 +1,44 @@
+@import "../../sass/variables";
+@import "../../sass/mixins";
+
+.cardContainer {
+  width: 380px;
+  padding: 2rem;
+  border-radius: 5px;
+  background-color: $blue;
+
+  .memberIdentifier {
+    padding-bottom: 1rem;
+    color: $green;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  .memberDep {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+    color: $white;
+    text-transform: capitalize;
+  }
+
+  .cardSubtitle {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+  .memberBirthday {
+    color: $white;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .cardContainer {
+    max-width: 280px;
+    min-width: 280px;
+  }
+
+  .memberDep {
+    flex-direction: column;
+  }
+}
